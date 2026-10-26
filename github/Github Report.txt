@@ -1,0 +1,149 @@
+# Understanding Git and GitHub Using Mac Terminal
+
+## 1. Introduction
+
+Git is a version control system that helps us track changes in our project files. GitHub is an online platform where we can store and share our projects.
+
+We used the MacBook Terminal and VS Code Terminal to connect our local Python project to GitHub and upload our Student Record Management System.
+
+## 2. Commands We Used
+
+### Step 1: Checking the Project Location
+
+Command:
+
+`pwd`
+
+**Meaning:** `pwd` stands for “Print Working Directory.”
+
+It displays the current folder location in the terminal. We used it to confirm that we were working inside the correct project folder.
+
+### Step 2: Checking Project Files
+
+Command:
+
+`ls *.pdf`
+
+**Meaning:** `ls` lists files and folders. The `*.pdf` part tells the terminal to display PDF files in the current folder.
+
+We used this command to find our report, named `Internova Python Assignment 6.pdf`.
+
+### Step 3: Initializing Git
+
+Command:
+
+`git init`
+
+**Meaning:** This initializes a Git repository in the current folder. Git can then track changes to files in that folder.
+
+### Step 4: Checking the Git Status
+
+Command:
+
+`git status`
+
+**Meaning:** This displays the current state of the repository. It helps us identify new files, modified files, and files that are ready to be committed.
+
+When it displayed “nothing to commit, working tree clean,” it meant there were no uncommitted changes at that moment.
+
+### Step 5: Adding Files to Git
+
+Command:
+
+`git add .`
+
+**Meaning:** The dot (`.`) means all eligible changes in the current folder should be staged.
+
+We used this to prepare our project files for the first commit.
+
+For adding only the report, we used:
+
+`git add "Internova Python Assignment 6.pdf"`
+
+The quotation marks allow Git to recognize the complete filename because it contains spaces. This command staged only the PDF report.
+
+### Step 6: Committing Changes
+
+Command:
+
+`git commit -m "Add Student Record Management System"`
+
+**Meaning:** A commit saves a snapshot of the staged changes in Git's history.
+
+The `-m` option lets us provide a short description of the changes.
+
+Later, we committed the report using:
+
+`git commit -m "Add project report PDF"`
+
+This recorded the addition of the PDF report in Git's history.
+
+### Step 7: Setting the Branch Name
+
+Command:
+
+`git branch -M main`
+
+**Meaning:** This renames the current branch to `main`. A branch is a separate line of development in Git.
+
+We used `main` as the primary branch for our project.
+
+### Step 8: Connecting GitHub
+
+Command:
+
+`git remote add origin https://github.com/shakunsharma890/Student-Record-Management-System.git`
+
+**Meaning:** This connects the local Git repository to the online GitHub repository.
+
+Here, `origin` is the conventional name for the remote repository.
+
+We used this connection to upload our project to GitHub.
+
+### Step 9: Uploading the Project
+
+Command:
+
+`git push -u origin main`
+
+**Meaning:** This uploads our local commits on the `main` branch to GitHub.
+
+The `-u` option sets the upstream relationship so Git knows which remote branch to use for future pushes.
+
+Our terminal confirmed that the initial project upload succeeded.
+
+### Step 10: Uploading the Report
+
+After saving the PDF in the main project folder, we staged and committed it separately. This ensured that only the report was added in that commit.
+
+We then ran:
+
+`git push`
+
+This attempted to upload the new report commit to GitHub. Git rejected the push because the remote branch had changes that were not yet present locally.
+
+### Step 11: Synchronizing with GitHub
+
+Command:
+
+`git pull --no-rebase origin main`
+
+**Meaning:** This downloads changes from the remote `main` branch and merges them into our local branch.
+
+During this process, Git opened a terminal text editor displaying a merge commit message. This is a normal part of completing a merge.
+
+In the editor, we were instructed to press `Esc`, type `:wq`, and press `Enter`. This saves the default merge message and closes the Vim editor.
+
+## 3. What We Learned
+
+- How to navigate and check our project folder.
+- How to initialize and check a Git repository.
+- How to stage and commit project changes.
+- How to connect a local repository to GitHub.
+- How to push files to GitHub.
+- How to synchronize local and remote changes.
+- How to use Git commands through the MacBook and VS Code terminals.
+
+## 4. Conclusion
+
+Using Git and GitHub helped us understand the basic version-control workflow. We successfully uploaded our Student Record Management System to GitHub and created a separate commit for the project report. The workflow also introduced us to handling synchronization between a local repository and a remote repository.
