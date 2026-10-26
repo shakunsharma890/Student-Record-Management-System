@@ -1,0 +1,30 @@
+[
+    {
+        "student_id": "12",
+        "name": "Rudra",
+        "age": 18,
+        "course": "non-medical",
+        "marks": 89.0
+    },
+    {
+        "student_id": "23",
+        "name": "Sita",
+        "age": 17,
+        "course": "non-medical",
+        "marks": 89.0
+    },
+    {
+        "student_id": "8",
+        "name": "Ram",
+        "age": 18,
+        "course": "non-medical",
+        "marks": 88.0
+    },
+    {
+        "student_id": "1",
+        "name": "Karan",
+        "age": 17,
+        "course": "non-medical",
+        "marks": 67.0
+    }
+]
